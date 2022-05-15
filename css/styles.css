@@ -115,6 +115,8 @@ h1, h2, h3, p, ul {
     letter-spacing: 0.02em;
 
     color: var(--secondary-title-text-color);
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-contact {
@@ -125,6 +127,8 @@ h1, h2, h3, p, ul {
 .contact {
     font-family: inherit;
     font-style: normal;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-contact .item+.item {
@@ -269,6 +273,8 @@ h1, h2, h3, p, ul {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-icon {
@@ -328,6 +334,8 @@ h1, h2, h3, p, ul {
     border-radius: 4px;
 
     color: var(--secondary-title-text-color);
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -529,6 +537,8 @@ h1, h2, h3, p, ul {
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .item-icon-team:not(:last-child) {
@@ -576,6 +586,8 @@ h1, h2, h3, p, ul {
     color: var(--primary-icon-color);
     border: 1px solid var(--primary-icon-color);
     border-radius: 4px;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -615,6 +627,8 @@ h1, h2, h3, p, ul {
     line-height: 1.62;
 
     color: var(--secondary-title-text-color);
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-list .item:not(:last-child) {
@@ -676,6 +690,8 @@ h1, h2, h3, p, ul {
 
 .link-product {
     display: block;
+
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
