@@ -16,6 +16,7 @@
     --header-bottom-border: #ECECEC;
     --work-list-border: #EEEEEE;
     --primary-icon-color: #AFB1B8;
+    --footer-icon-join-bgc: rgba(255, 255, 255, 0.1);
     --specific-item-tittle-bgc: rgba(47, 48, 58, 0.8);
     --overlay-bgc: rgba(33, 150, 243, 0.9);
 }
@@ -128,7 +129,9 @@ h1, h2, h3, p, ul {
     font-family: inherit;
     font-style: normal;
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-contact .item+.item {
@@ -269,12 +272,15 @@ h1, h2, h3, p, ul {
     width: 44px;
     height: 44px;
     color: var(--primary-icon-color);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--footer-icon-join-bgc);
     border-radius: 50%;
     align-items: center;
     justify-content: center;
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .join-icon {
@@ -335,7 +341,9 @@ h1, h2, h3, p, ul {
 
     color: var(--secondary-title-text-color);
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -538,8 +546,9 @@ h1, h2, h3, p, ul {
     align-items: center;
     justify-content: center;
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 .item-icon-team:not(:last-child) {
     margin-right: 10px;
@@ -587,8 +596,9 @@ h1, h2, h3, p, ul {
     border: 1px solid var(--primary-icon-color);
     border-radius: 4px;
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-property: border-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 
 .client-logo {
@@ -628,8 +638,9 @@ h1, h2, h3, p, ul {
 
     color: var(--secondary-title-text-color);
 
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 .filter-list .item:not(:last-child) {
     margin-right: 8px;
@@ -721,8 +732,11 @@ h1, h2, h3, p, ul {
     background-color: var(--overlay-bgc);
 
     transform: translateY(100%);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     opacity: 0;
+    
+    transition-property: transform, opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-product:hover,
