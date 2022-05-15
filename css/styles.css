@@ -161,7 +161,25 @@ h1, h2, h3, p, ul {
 }
 
 .active-page {
+    position: relative;
     color: var(--link-active-color);
+}
+
+.active-page::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+
+    background-color: currentColor;
+    border-radius: 2px;
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+
 }
 
 /* footer */
