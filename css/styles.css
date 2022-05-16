@@ -184,6 +184,10 @@ h1, h2, h3, p, ul {
 }
 
 .active-page::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
     content: "";
     display: block;
     width: 100%;
@@ -191,10 +195,6 @@ h1, h2, h3, p, ul {
 
     background-color: currentColor;
     border-radius: 2px;
-
-    position: absolute;
-    left: 0;
-    bottom: 0;
 }
 
 /* footer */
