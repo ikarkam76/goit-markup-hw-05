@@ -19,15 +19,17 @@
     --footer-icon-join-bgc: rgba(255, 255, 255, 0.1);
     --specific-item-tittle-bgc: rgba(47, 48, 58, 0.8);
     --overlay-bgc: rgba(33, 150, 243, 0.9);
+    --modal-backdrop-bgc: rgba(0, 0, 0, 0.2);
 }
 
 body {
-    background-color: var(--primary-background-color);
-    color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    
 }
 
 /* main options */
@@ -238,6 +240,7 @@ h1, h2, h3, p, ul {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
+
     text-transform: uppercase;
     color: var(--footer-address-text-color);
 }
@@ -260,6 +263,7 @@ h1, h2, h3, p, ul {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
     color: var(--footer-contact-text-color);
 }
 
@@ -268,6 +272,7 @@ h1, h2, h3, p, ul {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
+
     justify-content: space-between;
 }
 
@@ -275,11 +280,13 @@ h1, h2, h3, p, ul {
     display: flex;
     width: 44px;
     height: 44px;
+    align-items: center;
+    justify-content: center;
+
     color: var(--primary-icon-color);
     background-color: var(--footer-icon-join-bgc);
     border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+
 
     transition-property: background-color;
     transition-duration: 250ms;
@@ -290,6 +297,7 @@ h1, h2, h3, p, ul {
 .join-icon {
     width: 20px;
     height: 20px;
+
     fill: var(--footer-address-text-color);
 }
 
@@ -488,7 +496,6 @@ h1, h2, h3, p, ul {
     text-transform: uppercase;
 
     color: var(--primary-title-text-color);
-
     background-color: var(--specific-item-tittle-bgc);
 }
 
@@ -521,7 +528,6 @@ h1, h2, h3, p, ul {
 .team-list {
     display: flex;
     flex-wrap: wrap;
-
     margin-top: 50px;
 }
 
@@ -680,6 +686,7 @@ h1, h2, h3, p, ul {
     font-size: 16px;
     line-height: 1.88;
     margin-top: 4px;
+
     color: var(--primary-text-color);
 }
 
@@ -713,6 +720,7 @@ h1, h2, h3, p, ul {
 .product-overlay-text {
     font-size: 18px;
     line-height: 1.56;
+
     color: var(--primary-title-text-color);
 }
 
@@ -735,7 +743,6 @@ h1, h2, h3, p, ul {
     background-color: var(--overlay-bgc);
 
     transform: translateY(100%);
-    
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -750,3 +757,53 @@ h1, h2, h3, p, ul {
 .link-product:focus .product-overlay {
     transform: translateY(0);
 }
+
+/*---------- modal ---------- */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--modal-backdrop-bgc);
+
+    transition-timing-function: 500ms;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.close-modal-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    
+    width: 30px;
+    height: 30px;
+
+
+    background-color: var(--primary-background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
